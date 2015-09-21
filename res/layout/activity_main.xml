@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mp3player.MainActivity" >
+
+    <SeekBar
+        android:id="@+id/seekMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp" />
+    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/seekMusic"
+	    android:orientation="horizontal">
+
+	    <Button
+	        android:id="@+id/preSong"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/pre" 
+	        android:layout_weight="1"/>
+	
+	    <Button
+	        android:id="@+id/action"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/action" 
+	        android:layout_weight="1"/>
+		    	    
+	    <Button
+	       android:id="@+id/nextSong"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:text="@string/next" 
+	       android:layout_weight="1"/>
+    
+	</LinearLayout>
+    
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/currenTime"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:text="AAA"/>
+
+    <TextView
+        android:id="@+id/finalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/seekMusic"
+        android:layout_alignTop="@+id/seekMusic"
+        android:layout_marginTop="28dp"
+        android:text="CCC"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/currenTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/finalTime"
+        android:layout_alignBottom="@+id/finalTime"
+        android:layout_alignLeft="@+id/seekMusic"
+        android:text="BBB"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
